@@ -1,8 +1,8 @@
 var todolist = [];
 
-function todo(id, message){
+function todo(message){
   return {
-    id: id,
+    id: todolist.length,
     message: message,
     completed: false,
     createdAt: Date.now(),
@@ -10,15 +10,11 @@ function todo(id, message){
     }
 }
 
- function addToDo(todo){
+ function addTodo(todo){
   todolist.push(todo)
  }
  
-   function checked(id){
-    for(var i = 0; i < todolist.length; i++){
-      if(todolist[i].id === id){
-        todolist[i].completed = true;
-        todolist[i].completedAt= Date.now();
-      }
-    }
-   }
+function toggleCheck(id){
+    todolist[id].completed = !todolist[id].completed;
+    todolist[id].completedAt= Date.now();
+}
