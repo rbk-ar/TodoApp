@@ -7,6 +7,7 @@ function todo(message){
     completed: false,
     createdAt: Date.now(),
     completedAt: undefined, 
+    deleted: false
     }
 }
 
@@ -17,4 +18,8 @@ function todo(message){
 function toggleCheck(id){
     todolist[id].completed = !todolist[id].completed;
     todolist[id].completedAt= Date.now();
+}
+
+function deleteTodo(id){
+    todolist[id].deleted = true;
 }
