@@ -14,11 +14,11 @@ function todo(id, message){
   todolist.push(todo)
  }
  
-   function checked(id){
-    for(var i = 0; i < todolist.length; i++){
-      if(todolist[i].id === id){
-        todolist[i].completed = true;
-        todolist[i].completedAt= Date.now();
+   function toggleCheck(id){
+   
+    todolist[i].completed = true;
+    todolist[i].completedAt= Date.now();
+    
       }
-    }
-   }
+    
+   
