@@ -1,24 +1,39 @@
 function displayTodo(todo){
-    var todoContainer= $('<div id= "todoContainer"></div>');
-    var todoMessage= $(`<div id="todoMsg"> ${todo.message} </div>`);
-    var completed= $(`<input id= "chbx-${todo.id}" class="checkbox" type= "checkbox" onClick="loops(${todo.id})">`);
+    var todoContainer= $('<div class= "todoContainer"></div>');
+    var todoMessage= $(`<div class="todoMsg"> ${todo.message} </div>`);
+    var completed= $(`<div id= "chbx-${todo.id}" class="completed"><input class= "checkbox" type= "checkbox" onClick="checkTodo(${todo.id})"></div>`);
     if(todo.completed){
         completed = $(`<div>completed</div>`);
     }
+    var deleteTodo = $(`<button onClick="deleteTodo_(${todo.id})">delete</button>`);
     todoContainer.append(todoMessage);
+    todoContainer.append(deleteTodo);
     todoContainer.append(completed);
     $('#todos').append(todoContainer);
 }
 
-function loops(id){
-    $('#todos').html('');
+function checkTodo(id){
+    $('#chbx-'+id).html('completed')
     toggleCheck(id);
+}
+
+function renderTodos(){
+    $('#todos').html('');
     for(var i = 0; i < todolist.length; i++){
-        displayTodo(todolist[i]);
+        if(!todolist[i].deleted){
+            displayTodo(todolist[i]);
+        }
     }
 }
 
-$('#btn').on('click', function (){
+
+function deleteTodo_(id){
+    deleteTodo(id);
+    renderTodos();
+}
+
+$('#form').on('submit', function (e){
+    e.preventDefault();
     var message = $('#txtarea').val();
     if(message === ""){
         alert("sorry, you can not enter an empty todo");
@@ -26,7 +41,6 @@ $('#btn').on('click', function (){
         var todo1 = todo(message);
         addTodo(todo1);
         displayTodo(todo1);
-        $('#todos').append(todoContainer);
         $('#txtarea').val("");
     }       
 });
