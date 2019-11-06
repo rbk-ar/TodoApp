@@ -1,24 +1,25 @@
 var todolist = [];
 
-function todo(id, message){
+function todo(message){
   return {
-    id: id,
+    id: todolist.length,
     message: message,
     completed: false,
     createdAt: Date.now(),
     completedAt: undefined, 
+    deleted: false
     }
 }
 
- function addToDo(todo){
+ function addTodo(todo){
   todolist.push(todo)
  }
  
-   function toggleCheck(id){
-   
-    todolist[i].completed = true;
-    todolist[i].completedAt= Date.now();
-    
-      }
-    
-   
+function toggleCheck(id){
+    todolist[id].completed = true;
+    todolist[id].completedAt= Date.now();
+}
+
+function deleteTodo(id){
+    todolist[id].deleted = true;
+}
