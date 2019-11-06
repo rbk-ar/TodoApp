@@ -16,7 +16,7 @@ function todo(message){
  }
  
 function toggleCheck(id){
-    todolist[id].completed = !todolist[id].completed;
+    todolist[id].completed = true;
     todolist[id].completedAt= Date.now();
 }
 
