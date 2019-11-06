@@ -53,6 +53,7 @@ h2 {
 .todoMsg {
 	flex: 1;
 	padding: 10px;
+	font-family: 'Ubuntu Condensed', sans-serif;
 }
 
 .completed {
@@ -61,8 +62,6 @@ h2 {
 	padding: 10px;
 }
 
-.checkbox {
-}
 
 form {
 	display: flex;
@@ -78,9 +77,10 @@ form {
 	font-size: 20px;
 	/* margin-right: 40px; */
 	border: none;
-	background-color: #4ECDC4; 
-	opacity: 30%;
+	background-color: #d2f8d2; 
+
 	color: black;
+	font-family:'Ubuntu Condensed', sans-serif;
 }
 
 #plus-btn {
@@ -118,45 +118,23 @@ label {
 	line-height: 20px;
 	margin: 0 0 0 5px;
 	font-family:'Ubuntu Condensed', sans-serif;
+	cursor: pointer;
 
 } 
 
 #todos-filter-completed {
-	opacity: 1px;
+	
 	cursor: pointer;
 	height: 20px;
 	width: 20px;
 	margin: 0 0 0 5px;
-	-webkit-appearance: none;
-	background-color: #FF6B6B;
-	opacity: 30%;
-	border: 1px solid #cacece;
-   padding: 9px;
-   display: inline-block;
-   position: relative;
+	background-color: orange;
+	border: 1px solid #FF6B6B;
+     padding: 9px;
+      color: orange;
 
 }
 
-#todos-filter-completed:active, #todos-filter-completed:checked:active {
-   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-}
-
-#todos-filter-completed:checked {
-   background-color: white;
-   border: 1px solid #FF6B6B;
-   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-   color: #e9ecee;
-}
-
-#todos-filter-completed:checked:after {
-   content: '\2714';
-   font-size: 14px;
-   position: absolute;
-   top: 0px;
-   left: 3px;
-   color: #FF6B6B;
-   
-}
 
 #todos-filter-data {
 	height: 25px;
@@ -165,12 +143,3 @@ label {
 #todos-filter-message {
 	height: 25px;
 }
-
-
-
-.photo {
-  height: 2px;
-} 
-
-
-
