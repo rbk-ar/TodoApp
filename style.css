@@ -1,32 +1,30 @@
 body {
-	background-color: #FF5032;
+	background-color: #1A535C;
 	margin:0;
-	font-family: 'Cabin', sans-serif;
 	color: #1D2731;
 }
 main {
-	/* background-color: white; */
 	display: flex;
 	flex-direction: column;
 	width: 50%;
-	margin: 150px auto;
-	border: 1px solid lightgray;
+	margin: 100px auto;
+	border: 1px solid #FFE8D1;
 	border-radius: 5px;
-	background-color: #FFE8D1;
-	 /* #E0BBA8; */
+	background-color: white;
 }
+
 header {
 	height: 100px;
-	background-color: #001B49; 
+	background-color: #1A535C; 
 	color: white;
 	text-align: center;
-
 }
+
 h1 {
 	margin: 0;
 	height: 100%;
 	line-height: 100px;
-	font-family: 'Cabin', sans-serif;
+    font-family: 'Fredoka One', cursive;
 	font-size: 50px;
 	font-weight: bold;
 }
@@ -34,6 +32,7 @@ h1 {
 h2 {
 	font-weight: lighter;
 	font-size: 30px;
+    font-family: 'Fredoka One', cursive;
 }
 
 #todos-header {
@@ -48,7 +47,7 @@ h2 {
 	display: flex;
 	padding: 10px;
 	font-size: 20px;
-	border-top: 1px solid #FFF;
+	border-top: 1px solid #FF6B6B;
 }
 
 .todoMsg {
@@ -79,9 +78,99 @@ form {
 	font-size: 20px;
 	/* margin-right: 40px; */
 	border: none;
-	/* background-color: #E0BBA8; */
+	background-color: #4ECDC4; 
+	opacity: 30%;
+	color: black;
 }
 
-#btn {
-	width: 45px;
+#plus-btn {
+	background-color: #FF6B6B;
+	width: 55px;
+	color: white;
+	border: none;
+	font-size: 30px;
+	font-weight: bold;
 }
+
+
+.dlt {
+	background-color: transparent;
+	padding: 0;
+	border:none;
+
+}
+.dlt:hover {
+	cursor: pointer;
+	
+}  
+
+img  {
+	width: 20px;
+}
+
+#todos-filter {
+	
+} 
+
+label {
+	color: black;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 0 0 5px;
+	font-family:'Ubuntu Condensed', sans-serif;
+
+} 
+
+#todos-filter-completed {
+	opacity: 1px;
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+	margin: 0 0 0 5px;
+	-webkit-appearance: none;
+	background-color: #FF6B6B;
+	opacity: 30%;
+	border: 1px solid #cacece;
+   padding: 9px;
+   display: inline-block;
+   position: relative;
+
+}
+
+#todos-filter-completed:active, #todos-filter-completed:checked:active {
+   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+#todos-filter-completed:checked {
+   background-color: white;
+   border: 1px solid #FF6B6B;
+   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+   color: #e9ecee;
+}
+
+#todos-filter-completed:checked:after {
+   content: '\2714';
+   font-size: 14px;
+   position: absolute;
+   top: 0px;
+   left: 3px;
+   color: #FF6B6B;
+   
+}
+
+#todos-filter-data {
+	height: 25px;
+}
+
+#todos-filter-message {
+	height: 25px;
+}
+
+
+
+.photo {
+  height: 2px;
+} 
+
+
+
