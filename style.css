@@ -54,6 +54,7 @@ h2 {
 	flex: 1;
 	padding: 10px;
 	font-family: 'Ubuntu Condensed', sans-serif;
+
 }
 
 .completed {
@@ -61,6 +62,7 @@ h2 {
 	color: darkgray;
 	padding: 10px;
 }
+
 
 
 form {
@@ -78,7 +80,6 @@ form {
 	/* margin-right: 40px; */
 	border: none;
 	background-color: #d2f8d2; 
-
 	color: black;
 	font-family:'Ubuntu Condensed', sans-serif;
 }
@@ -119,22 +120,17 @@ label {
 	margin: 0 0 0 5px;
 	font-family:'Ubuntu Condensed', sans-serif;
 	cursor: pointer;
-
 } 
 
 #todos-filter-completed {
-	
 	cursor: pointer;
 	height: 20px;
 	width: 20px;
 	margin: 0 0 0 5px;
-	background-color: orange;
 	border: 1px solid #FF6B6B;
-     padding: 9px;
-      color: orange;
+  padding: 9px;
 
 }
-
 
 #todos-filter-data {
 	height: 25px;
@@ -143,10 +139,5 @@ label {
 #todos-filter-message {
 	height: 25px;
 }
-
-
-
-
-
 
 
