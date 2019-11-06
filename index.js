@@ -75,21 +75,6 @@ function byMessage(message){
    }
 }
 
-$('#Date').on('change', function(event){
-    $('#todos').html('')
-        var date = new Date(event.target.value).getDate()
-        var month = new Date(event.target.value).getMonth()
-        var year = new Date(event.target.value).getYear()
-        var minutes = new Date(event.target.value).getMinutes()
-        for (var i = 0; i < todolist.length; i++) {
-        var something = todolist[i].createdAt;
-        if(new Date (something).getDate()=== date && new Date (something).getMonth() === month && new Date (something).getYear() === year){
-            displayTodo(todolist[i]);
-        }
-    }         
-}); 
-
-
 function deleteTodo_(id){
     deleteTodo(id);
     renderTodos();

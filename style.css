@@ -63,8 +63,6 @@ h2 {
 	padding: 10px;
 }
 
-
-
 form {
 	display: flex;
 	/* border: 1px solid #F2E9E4; */
@@ -127,10 +125,13 @@ label {
 	height: 20px;
 	width: 20px;
 	margin: 0 0 0 5px;
+	background-color: orange;
 	border: 1px solid #FF6B6B;
   padding: 9px;
+  color: orange;
 
 }
+
 
 #todos-filter-data {
 	height: 25px;
@@ -139,5 +140,3 @@ label {
 #todos-filter-message {
 	height: 25px;
 }
-
-
