@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Todo</title>
-        <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Ubuntu+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
@@ -11,17 +12,22 @@
         </header>
         <main>
             <div id="todos-header">
-                <h2>what are you up to?</h2>
-            </div>
+                <h2>WHAT ARE YOU UP TO?</h2>
+                <div id= "todos-filter">
+                    <input id= "todos-filter-completed" type="checkbox" name="complete">
+                    <label>COMPLETED</label>  
+                    <span>
+                        <img src="images/magnifying-glass.png"> 
+                        <input type="text" name="message" placeholder="search" id= "todos-filter-message"> 
+                    </span>
+                    <input id="todos-filter-data" type="date">
+                </div>
             <div id="todos"></div>
             <form id="form">
                 <input type="text" placeholder="Do Something" id='txtarea'>
-                <button> ADD TODO </button>
+                <button id="plus-btn"> + </button>
             </form>
         </main>
-        <footer>
-            
-        </footer>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="todolist.js"> </script> 
         <script src="index.js"></script>
